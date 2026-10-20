@@ -7,10 +7,34 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div id="app">
+        <div class="vid-container">
+            <video class="video" src="./video/rain.mp4" loop muted playsinline></video>
+        </div>
 
+        <div id="time-select">
+            <button id="smaller-mins" data-time="120">2 Minutes</button>
+            <button id="medium-mins" data-time="300">5 Minutes</button>
+            <button id="long-mins" data-time="600" class="active">10 Minutes</button>
+        </div>
+
+        <div class="player-container">
+            <audio class="song" src="./Sounds/rain.mp3" loop></audio>
+            <svg viewBox="0 0 100 100">
+                <circle class="track-outline" cx="50" cy="50" r="45"></circle>
+                <circle class="moving-outline" cx="50" cy="50" r="45" transform="rotate(-90 50 50)"></circle>
+            </svg>
+            <button class="play">&#9654;</button>
+            <h3 class="time-display">10:0</h3>
+        </div>
+
+        <div class="sound-picker">
+            <button data-sound="./Sounds/rain.mp3" data-video="./video/rain.mp4">&#127783;</button>
+            <button data-sound="./Sounds/beach.mp3" data-video="./video/beach.mp4">&#9728;</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
